@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Personal Learning Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+<style>
+  @keyframes pulse-radius {
+    0% { r: 12; }
+    50% { r: 15; }
+    100% { r: 12; }
+  }
+  @keyframes pulse-stroke {
+    0% { stroke-width: 2.5; }
+    50% { stroke-width: 4; }
+    100% { stroke-width: 2.5; }
+  }
+  .node-group.selected circle {
+    stroke: #06b6d4; /* cyan-400 */
+    animation: pulse-radius 1.5s ease-in-out infinite, pulse-stroke 1.5s ease-in-out infinite;
+  }
+  .node-group.selected text {
+    font-weight: bold;
+    fill: #22d3ee; /* lighter cyan */
+  }
+</style>
+</head>
+  <body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

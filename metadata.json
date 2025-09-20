@@ -1,0 +1,5 @@
+{
+  "name": "AI-Powered Personal Learning Assistant",
+  "description": "An adaptive learning tool that builds a personalized knowledge graph for any topic. It generates tailored lessons in various formats (text, diagrams, examples) and offers a dynamic Q&A chat to help users learn more effectively.",
+  "requestFramePermissions": []
+}
